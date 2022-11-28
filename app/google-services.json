@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "945135346812",
+    "project_id": "basedatos-41310",
+    "storage_bucket": "basedatos-41310.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945135346812:android:280ea43e6797a2ac9455f9",
+        "android_client_info": {
+          "package_name": "com.example.basecontactos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945135346812-52htdkgo8v6tvhabv8rup7lmts8440ik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ_CTtQDY2q_PzvnsuFtgHfFzTG2ZplQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945135346812-52htdkgo8v6tvhabv8rup7lmts8440ik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
