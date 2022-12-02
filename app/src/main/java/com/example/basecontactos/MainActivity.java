@@ -42,14 +42,9 @@ public class MainActivity extends AppCompatActivity {
                 timer.schedule(timerTask, 40, 40);
             }
         });
-
-
     }
-
-
-
-
-
-
-
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return false;
+    }
 }

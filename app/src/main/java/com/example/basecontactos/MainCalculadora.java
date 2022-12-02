@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainCalculadora extends AppCompatActivity {
     TextView tvResultado;
+    //Float numeros Reales
     float valor= 0f;
     float numero1 = 0f;
     float numero2 = 0f;
@@ -18,9 +19,7 @@ public class MainCalculadora extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculadora);
-
         tvResultado = findViewById(R.id.tvResultado);
-
     }
     public void escribirUno(View view) {
         valor = Float.parseFloat(tvResultado.getText().toString());
@@ -153,6 +152,10 @@ public class MainCalculadora extends AppCompatActivity {
         numero1 = 0f;
         numero1 = 0f;
         operacion = "";
+    }
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return false;
     }
 }
 

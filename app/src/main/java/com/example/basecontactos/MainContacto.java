@@ -25,9 +25,9 @@ public class MainContacto extends AppCompatActivity {
         mFirestore = FirebaseFirestore.getInstance();
         mRecycler = findViewById(R.id.recyclerView);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        //Hace la Consulta a la base de datos de firebase y lo muestra en el Recycler
         Query query = mFirestore.collection("contactos");
         FirestoreRecyclerOptions<Contacto> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Contacto>().setQuery(query, Contacto.class).build();
-
         cAdapter = new ContactoAdapter(firestoreRecyclerOptions, this, getSupportFragmentManager());
         cAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(cAdapter);
@@ -44,4 +44,10 @@ public class MainContacto extends AppCompatActivity {
         super.onStop();
         cAdapter.stopListening();
     }
+
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return false;
+    }
+
 }

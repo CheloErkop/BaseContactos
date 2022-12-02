@@ -45,6 +45,15 @@ public class ContactoAdapter extends FirestoreRecyclerAdapter<Contacto, Contacto
         viewHolder.nombre.setText(Contacto.getNombre());
         viewHolder.telefono.setText(Contacto.getTelefono());
         viewHolder.correo.setText(Contacto.getCorreo());
+        viewHolder.editar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(activity, MainCrearContacto.class);
+                i.putExtra("id_contacto", id);
+                activity.startActivity(i);
+            }
+        });
+
         viewHolder.eliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +95,7 @@ public class ContactoAdapter extends FirestoreRecyclerAdapter<Contacto, Contacto
             telefono =itemView.findViewById(R.id.telefono);
             correo =itemView.findViewById(R.id.correo);
             eliminar = itemView.findViewById(R.id.btnEliminar);
+            editar = itemView.findViewById(R.id.btnEditar);
         }
     }
 }

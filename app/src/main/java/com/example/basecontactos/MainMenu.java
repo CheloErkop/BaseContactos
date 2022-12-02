@@ -6,17 +6,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RatingBar;
+import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
     Button  botonCalculadora;
-
+    RatingBar ratingBar;
+    Button calificar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         botonCalculadora = findViewById(R.id.btnCalculadora);
+
+        ratingBar = findViewById(R.id.ratingBar);
+        calificar = findViewById(R.id.btnCalificar);
+
+        calificar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = String.valueOf(ratingBar.getRating());
+                Toast.makeText(getApplicationContext(), s+" - Gracias por calificarme con esas estrellas", Toast.LENGTH_SHORT).show();
+            }
+        });
+
         botonCalculadora.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,4 +51,8 @@ public class MainMenu extends AppCompatActivity {
         startActivity(b);
     }
 
+    public boolean onSupportNavigateUp(){
+        onBackPressed();
+        return false;
+    }
 }
