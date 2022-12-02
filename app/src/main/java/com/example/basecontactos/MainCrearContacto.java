@@ -27,6 +27,7 @@ public class MainCrearContacto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main_crear_contacto);
 
         this.setTitle("Agregar Contacto");

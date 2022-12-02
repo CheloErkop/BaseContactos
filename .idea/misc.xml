@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/activity_main_calculadora.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/activity_main_contacto.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/activity_main_crear_contacto.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/activity_main_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/chelo/AndroidStudioProjects/BaseContactos/app/src/main/res/layout/view_contact_list.xml" value="0.33" />
       </map>
     </option>
   </component>

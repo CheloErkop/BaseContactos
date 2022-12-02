@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BaseContactos">
         <activity
+            android:name=".MainMenu"
+            android:exported="true" />
+        <activity
+            android:name=".MainContacto"
+            android:exported="true" />
+        <activity
             android:name=".MainCrearContacto"
+            android:exported="true" />
+        <activity
+            android:name=".MainCalculadora"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
