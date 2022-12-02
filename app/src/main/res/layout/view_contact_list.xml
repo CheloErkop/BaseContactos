@@ -22,7 +22,7 @@
             app:srcCompat="@drawable/ic_baseline_account_box_24" />
 
         <LinearLayout
-            android:layout_width="282dp"
+            android:layout_width="225dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -66,11 +66,12 @@
             android:id="@+id/btnEditar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            app:srcCompat="@drawable/ic_create" />
+            android:background="#423F3E"
+            app:srcCompat="@drawable/ic_create"
+            app:tint="#448AFF" />
 
         <Space
-            android:layout_width="15dp"
+            android:layout_width="1dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -79,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_delete"
-
-            app:tint="#4300FF" />
+            android:background="#423F3E"
+            app:tint="#448AFF" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -35,14 +35,16 @@ public class MainCrearContacto extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mFirestore = FirebaseFirestore.getInstance();
 
+        //Busca el id que esta en el ViewHolder
         String id = getIntent().getStringExtra("id_contacto");
-
 
         nombre = findViewById(R.id.txtNombre);
         telefono = findViewById(R.id.txtTelefono);
         correo = findViewById(R.id.txtCorreo);
         btn_add= findViewById(R.id.btnRegistrar);
 
+
+        //Si el id esta vacio, este se va a crear al momento de agregar un contacto
         if (id == null || id == ""){
             btn_add.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -59,6 +61,7 @@ public class MainCrearContacto extends AppCompatActivity {
                 }
             });
         }else{
+            //si querremos modificar un contacto, este abrira una ventana pidiendo los datos y modificando mediante el id
             btn_add.setText("Modificar");
             getContacto(id);
             btn_add.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +82,7 @@ public class MainCrearContacto extends AppCompatActivity {
             }
 
     private void updateContacto(String name, String number, String email, String id) {
+        //Modifica los contactos mediante el id que creamos (getContacto), lo manda a una actividad nueva para modificarlos
         Map<String, Object> map = new HashMap<>();
         map.put("nombre", nombre.getText().toString());
         map.put("telefono", telefono.getText().toString());
@@ -99,6 +103,7 @@ public class MainCrearContacto extends AppCompatActivity {
     }
 
     private void postContacto(String name, String number, String email) {
+        //Crea el Contacto a traves de los Plain Text y los manda al Firebase
         Map<String, Object> map = new HashMap<>();
         map.put("nombre", nombre.getText().toString());
         map.put("telefono", telefono.getText().toString());
@@ -120,6 +125,7 @@ public class MainCrearContacto extends AppCompatActivity {
     }
 
     private void getContacto(String id){
+        //Dejar los contactos en un id
         mFirestore.collection("pet").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
@@ -130,7 +136,6 @@ public class MainCrearContacto extends AppCompatActivity {
                 nombre.setText(nameContacto);
                 telefono.setText(phoneContacto);
                 correo.setText(mailContacto);
-
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
